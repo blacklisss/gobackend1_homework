@@ -4,8 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - main
-      - lesson_*
+      - *
 
 jobs:
   # Check if there any dirty change for go mod tidy
