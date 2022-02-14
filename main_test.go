@@ -124,7 +124,7 @@ func TestGetList(t *testing.T) {
 	}
 
 	// Проверяем тело ответа
-	expected := "<a href='http://localhost:3002/i.jpeg'>i.jpeg</a> 20525Bytes<br>\n<a href='http://localhost:3002/test.txt'>test.txt</a> 3Bytes<br>"
+	expected := "<a href='http://localhost:3002/i.jpeg'>i.jpeg</a> 20525Bytes<br>\n<a href='http://localhost:3002/test.txt'>test.txt</a> 4Bytes<br>"
 	if strings.TrimSpace(rr.Body.String()) != expected {
 		t.Errorf("handler returned unexpected body: got %v want %v",
 			rr.Body.String(), expected)
@@ -192,7 +192,7 @@ func TestGetListWithParamTxt(t *testing.T) {
 	}
 
 	// Проверяем тело ответа
-	expected := "<a href='http://localhost:3002/test.txt'>test.txt</a> 3Bytes<br>"
+	expected := "<a href='http://localhost:3002/test.txt'>test.txt</a> 4Bytes<br>"
 	if strings.TrimSpace(rr.Body.String()) != expected {
 		t.Errorf("handler returned unexpected body: got %v want %v",
 			rr.Body.String(), expected)
